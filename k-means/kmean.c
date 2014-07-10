@@ -2,8 +2,6 @@
  ============================================================================
  Name        : kmean.c
  Author      : duythanhphan
- Version     : 0.1
- Copyright   :
  Description : k-mean clustering
  ============================================================================
  */
@@ -11,20 +9,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define ELENUM      25
-#define CLUSNUM     3
+#define ELENUM      16
+#define CLUSNUM     2
 
 static int n = ELENUM;
 static int p = CLUSNUM;
-static int d[] = {  100, 100, 100, 100, 100,
-                     50,  80, 200,  80,  50,
-                     50,  80, 200,  80,  50,
-                     50,  80, 200,  80,  50,
-                    100, 100, 100, 100, 100  };
+static int d[] = {  5, 15, 40, 10,
+                   40, 50, 80, 80,
+                   80, 80, 40, 50,
+                   10, 20, 40, 10 };
 
 static int k[CLUSNUM][ELENUM];
 static int tempk[CLUSNUM][ELENUM];
-static double m[CLUSNUM] = {60, 120, 200} ;
+static double m[CLUSNUM] = {10, 50};
 static double diff[CLUSNUM];
 
 static int count1, count2, count3;
